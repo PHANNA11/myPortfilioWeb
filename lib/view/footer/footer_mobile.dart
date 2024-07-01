@@ -1,41 +1,61 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class FooterMobile extends StatelessWidget {
   const FooterMobile({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(4.0),
-          child: const Text('Contact Us'),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Padding(
+    return Container(
+      height: 100,
+      color: Colors.black,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const Padding(
               padding: EdgeInsets.all(4.0),
-              child: Text('Privacy'),
+              child: Text(
+                'Contact Us',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
-            Padding(
-              padding: EdgeInsets.all(4.0),
-              child: Text('Cookies'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Padding(
+                  padding: EdgeInsets.all(4.0),
+                  child: Text(
+                    'Privacy',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(4.0),
+                  child: Text(
+                    'Cookies',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(4.0),
+                  child: Text(
+                    'Terms & Service',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ],
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(4.0),
-              child: Text('Terms & Service'),
+              child: Text(
+                '2024 FlutterWeeken.com',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ],
         ),
-        Padding(
-          padding: const EdgeInsets.all(4.0),
-          child: const Text('2024 TheWeekedFlutter.com'),
-        ),
-      ],
+      ),
     );
   }
 }
